@@ -79,8 +79,8 @@ PRODUCT_COPY_FILES += \
 
 #Sensor
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sensor/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
-    $(LOCAL_PATH)/sensor/sensor_diag.cfg:system/etc/sensor_diag.cfg
+    $(LOCAL_PATH)/sensor/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
+    $(LOCAL_PATH)/sensor/hals.conf:system/etc/sensors/hals.conf
 
 #keylayout
 PRODUCT_COPY_FILES += \
