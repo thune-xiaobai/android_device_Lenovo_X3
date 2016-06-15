@@ -68,11 +68,6 @@ PRODUCT_COPY_FILES += \
 
 #keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ft5x46.kl:system/usr/keylayout/ft5x46.kl \
-    $(LOCAL_PATH)/Generic.kl:system/usr/keylayout/Generic.kl \
-    $(LOCAL_PATH)/atmel-maxtouch.kl:system/usr/keylayout/atmel-maxtouch.kl \
-    $(LOCAL_PATH)/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/synaptics_dsx_edge.kl:system/usr/keylayout/synaptics_dsx_edge.kl \
     $(LOCAL_PATH)/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl
 
 #hostapd
