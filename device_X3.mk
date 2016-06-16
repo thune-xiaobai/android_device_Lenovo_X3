@@ -191,6 +191,10 @@ PRODUCT_PACKAGES += \
     libcurl \
     curl
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    fingerprintd
+
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     e2fsck \
@@ -224,6 +228,10 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
+# Camrera
+PRODUCT_PACKAGES += \
+    Snap
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8992
@@ -235,6 +243,12 @@ PRODUCT_PACKAGES += \
 # Live Wallpapers
 PRODUCT_PACKAGES += \
     librs_jni
+
+# NFC
+PRODUCT_PACKAGES += \
+    nfc_nci.bcm2079x.default \
+    NfcNci \
+    Tag
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -251,6 +265,10 @@ PRODUCT_PACKAGES += \
     libOmxVidcCommon \
     libstagefrighthw \
     qcmediaplayer
+
+#rmnetctl
+PRODUCT_PACKAGES += \
+    librmnetctl
 
 # Power
 PRODUCT_PACKAGES += \
@@ -274,8 +292,7 @@ PRODUCT_PACKAGES += \
 
 #stlport
 PRODUCT_PACKAGES += \
-    libstlport \
-    libcamera_shim
+    libstlport
 
 # USB
 PRODUCT_PACKAGES += \
@@ -319,6 +336,7 @@ PRODUCT_MODEL := Lenovo X3
 # Init scripts
 PRODUCT_PACKAGES += \
     init.class_main.sh \
+    init.lenovo.rc \
     init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh	\
@@ -327,9 +345,7 @@ PRODUCT_PACKAGES += \
     init.qcom.syspart_fixup.sh \
     init.qcom.usb.sh \
     init.qcom.rc \
-    init.qcom.usb.cdrom.rc \
     init.qcom.usb.rc \
-    init.recovery.hardware.rc \
     init.target.rc \
     ueventd.goldfish.rc \
     ueventd.qcom.rc \
