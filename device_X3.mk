@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     device/Lenovo/X3/kernel:kernel \
     device/Lenovo/X3/dt.img:dt.img
 
