@@ -347,6 +347,5 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    ueventd.goldfish.rc \
     ueventd.qcom.rc \
     fstab.qcom
