@@ -4,7 +4,7 @@ $(call inherit-product-if-exists, vendor/Lenovo/X3/X3-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/Lenovo/X3/overlay
 
-TARGET_OTA_ASSERT_DEVICE := X3,X3c70,X3c50
+TARGET_OTA_ASSERT_DEVICE := X3,X3c70,X3c50,x3_row
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
