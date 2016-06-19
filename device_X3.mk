@@ -53,7 +53,6 @@ PRODUCT_COPY_FILES += \
 #audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_ext_spkr.conf:system/etc/audio_ext_spkr.conf \
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_platform_info_i2s.xml:system/etc/audio_platform_info_i2s.xml \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
@@ -84,7 +83,8 @@ PRODUCT_COPY_FILES += \
 
 #keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl
+    $(LOCAL_PATH)/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
+    $(LOCAL_PATH)/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
 #hostapd
 PRODUCT_COPY_FILES += \
@@ -118,7 +118,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:system/etc/permissions/android.hardware.camera.full.xml\
     frameworks/native/data/etc/android.hardware.camera.raw.xml:system/etc/permissions/android.hardware.camera.raw.xml\
-    frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
@@ -134,6 +133,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.sensor.ambient_temperature.xml:system/etc/permissions/android.hardware.sensor.ambient_temperature.xml \
+    frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:system/etc/permissions/android.hardware.sensor.relative_humidity.xml
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf \
@@ -184,7 +188,11 @@ PRODUCT_PACKAGES += \
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
-    libcnefeatureconfig
+    CNEService \
+    cneapiclient \
+    com.quicinc.cne \
+    libcnefeatureconfig \
+    services-ext
 
 # Curl
 PRODUCT_PACKAGES += \
@@ -214,7 +222,6 @@ PRODUCT_PACKAGES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
-    consumerir.msm8992.so \
     copybit.msm8992 \
     gralloc.msm8992 \
     hwcomposer.msm8992 \
@@ -252,7 +259,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     nfc_nci.bcm2079x.default \
     NfcNci \
-    Tag
+    Tag \
+    com.android.nfc_extras
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -267,6 +275,8 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdecHevc \
     libOmxVidcCommon \
+    libOmxVdec \
+    libOmxVenc \
     libstagefrighthw \
     qcmediaplayer
 

@@ -929,3 +929,5 @@ lib/libarcsoft_panorama_burstcapture.so
 lib/libarcsoft_beautyshot.so
 lib/libcamerabgprocservice.so
 lib/libcamerabgproc-jni.so
+lib/hw/audio.primary.msm8992.so
+lib64/hw/audio.primary.msm8992.so
