@@ -173,7 +173,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 BOARD_HARDWARE_CLASS := device/Lenovo/X3/cmhw
 
 # dt2w
-TARGET_TAP_TO_WAKE_NODE := ""
+TARGET_TAP_TO_WAKE_NODE := "/sys/class/input/input0/wake_gesture"
 
 # Ril
 FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
