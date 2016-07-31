@@ -49,6 +49,7 @@ on init
     chown system system /sys/class/inupt/input0/glove_mode
     chown system system /sys/class/inupt/input0/gesture_only
     chown system system /sys/class/input/input0/wake_gesture
+    chown system system /sys/class/input/input0/0dbutton
     chown system system /sys/class/touch/tp_dev/ic_info
 
 
