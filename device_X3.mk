@@ -84,7 +84,8 @@ PRODUCT_COPY_FILES += \
 #keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
-    $(LOCAL_PATH)/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+    $(LOCAL_PATH)/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/Generic.kl:system/usr/keylayout/Generic.kl
 
 #hostapd
 PRODUCT_COPY_FILES += \
@@ -287,7 +288,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom
+    power.msm8992
 
 PRODUCT_BOOT_JARS += \
     qcmediaplayer
