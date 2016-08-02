@@ -13,12 +13,7 @@ ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 # Start in global mode
 ro.telephony.default_network=20
-#set default data
-ro.com.android.mobiledata=false
-ro.lenovo.signalbars=five
 
-debug.sf.hw=1
-debug.egl.hw=1
 debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
 persist.mdpcomp.4k2kSplit=1
@@ -57,13 +52,7 @@ media.stagefright.enable-scan=true
 mmp.enable.3g2=true
 mm.enable.smoothstreaming=true
 media.aac_51_output_enabled=true
-
-#3314291: Decimal sum after adding FLAC parser flag 131072
-#37491 is decimal sum of supported codecs in AAL
-#codecs: DivX DivXHD AVI AC3 ASF AAC QCP DTS 3G2 MP2TS
-#3379827: 3314291 adding qti wav parser
-#mm.enable.qcom_parser=3314291
-mm.enable.qcom_parser=3379827
+av.debug.disable.pers.cache=true
 
 # Enable AwesomePlayer stats
 persist.debug.sf.statistics=1
@@ -174,6 +163,7 @@ persist.hwc.enable_vds=1
 ro.vendor.at_library=libqti-at.so
 ro.vendor.gt_library=libqti-gt.so
 sys.games.gt.prof=0
+sys.apps.hwaccel.enable=1
 
 #hwui properties
 ro.hwui.texture_cache_size=72
@@ -187,9 +177,6 @@ ro.hwui.text_small_cache_width=1024
 ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=1024
-
-# enable navigation bar
-qemu.hw.mainkeys=1
 
 #enable dolby ds2
 audio.dolby.ds2.enabled=true
@@ -206,21 +193,12 @@ persist.debug.coresight.config=stm-events
 #System property for China UnionPay
 ro.product.cuptsm=LENOVO|ESE|01|01
 
-#Begin,Lenovo-sw zhangkun9 add 2015-12-01, add new feature
-#enable qcril log to adb and qxdm
-persist.radio.adb_log_on=0
-#End,Lenovo-sw zhangkun9 add 2015-12-01, add new feature
-
-#enale monitor rotation change for audio
-ro.audio.monitorRotation=true
-
 #case 02351832
 persist.radio.ims.cmcc=true
 
 #System property for Finger Camera
 persist.sys.fingerprint.camera=1
 
-ro.com.android.dataroaming=false
 ro.carrier=unknown
 ro.vendor.extension_library=libqti-perfd-client.so
 persist.radio.apm_sim_not_pwdn=1
@@ -228,24 +206,11 @@ persist.radio.custom_ecc=1
 persist.radio.sib16_support=1
 af.fast_track_multiplier=1
 audio_hal.period_size=192
-ro.audio.rxanc=true
-ro.audio.rxanc_default_on=false
-persist.audio.rxanc_enabled=false
-persist.sys.backgrounddata=false
-persist.sys.lenovo.ltetype=VOLTE
-ro.product.locale.language=zh
-ro.product.locale.region=CN
 ro.sf.lcd_density=480
-ro.lenovo.soundeffect=dolby
 fmradio.driver.enable=0
-ro.lenovo.hifi_support=true
-ro.lenovo.turbo_support=true
-ro.lenovo.dsd_support=true
 persist.radio.multisim.config=dsds
 persist.radio.sap_silent_pin=1
 persist.radio.primarycard=true
-ro.telephony.default_cdma_sub=0
-sys.lenovo.romui.version.sdk=3
 drm.service.enabled=true
 ro.com.widevine.cachesize=16777216
 persist.radio.rat_on=combine
@@ -253,10 +218,10 @@ persist.data.dont_use_epc=true
 persist.radio.sw_mbn_update=1
 persist.radio.hw_mbn_update=1
 ro.lenovo.single_hand=1
-ro.product.ota.model=LenovoX3c70_m
 persist.radio.ruimenabled=true
 persist.sys.ruimenabled=true
-persist.sys.dalvik.vm.lib.2=libart
 persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
+
+persist.camera.cpp.duplication=false

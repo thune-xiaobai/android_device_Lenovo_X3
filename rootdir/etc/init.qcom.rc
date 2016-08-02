@@ -48,10 +48,16 @@ on init
     #for tp sys file
     chown system system /sys/class/inupt/input0/glove_mode
     chown system system /sys/class/inupt/input0/gesture_only
-    chown system system /sys/class/input/input0/wake_gesture
-    chown system system /sys/class/input/input0/0dbutton
     chown system system /sys/class/touch/tp_dev/ic_info
 
+    #Vibrator
+    chown system system /sys/class/timed_output/vibrator/vmax
+
+    #KeyDisabler
+    chown system system /sys/class/input/input0/0dbutton
+
+    #Dt2w
+    chown system system /sys/class/input/input0/wake_gesture
 
     #change some node access mode for system app to access
     chown system system /dev/rmi0
@@ -963,6 +969,7 @@ service hcidump /system/bin/sh /system/etc/hcidump.sh
 
 service charger /charger
     class charger
+    seclabel u:r:healthd:s0
 
 service ssr_diag /system/bin/ssr_diag
     class late_start
